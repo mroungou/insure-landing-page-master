@@ -1,1 +1,255 @@
-/*# sourceMappingURL=main.css.map */
+body {
+  margin: 0;
+}
+body .desktop {
+  display: none;
+}
+body * {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+}
+
+main .overlay {
+  display: none !important;
+  position: absolute;
+  top: 80px;
+  z-index: 1;
+  display: block;
+  background: hsl(256, 26%, 20%);
+  color: hsl(0, 0%, 98%);
+  text-align: center;
+  font-size: 1.5rem;
+}
+main .overlay .nav {
+  background-color: hsl(0, 0%, 98%);
+}
+main .overlay .overlay-nav {
+  padding: 1rem;
+}
+main .overlay a, main .overlay a:visited {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 98%);
+  font-family: "Karla", sans-serif;
+  padding: 0.75rem;
+  margin: 1rem 0;
+}
+main .overlay #view-plans {
+  border: 2px solid hsl(0, 0%, 98%);
+}
+main .overlay .pattern-nav {
+  padding-top: 6rem;
+}
+
+.nav {
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "logo buttons";
+}
+.nav .logo {
+  grid-area: logo;
+  display: block;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-top: auto;
+}
+.nav .menu {
+  grid-area: buttons;
+  display: block;
+  margin-left: auto;
+  margin-bottom: auto;
+  margin-top: auto;
+}
+.nav .close {
+  grid-area: buttons;
+  display: none;
+  margin-left: auto;
+  margin-bottom: auto;
+  margin-top: auto;
+}
+
+.header {
+  height: 100%;
+  background: hsl(256, 26%, 20%);
+  text-align: center;
+  color: hsl(0, 0%, 98%);
+  font-family: "Karla", sans-serif;
+  padding-bottom: 4rem;
+}
+.header .header-content {
+  position: relative;
+}
+.header img {
+  width: 100%;
+}
+.header h1 {
+  font-family: "DM Serif Display", serif;
+  font-size: 3rem;
+  padding: 3rem 1rem 0;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+.header p {
+  margin: 0;
+  line-height: 1.5;
+  padding: 0 1.75rem;
+}
+.header .plans {
+  padding: 0.75rem;
+  border: 2px solid hsl(0, 0%, 98%);
+  margin: 2rem auto;
+  width: 40%;
+  text-transform: uppercase;
+}
+.header .left {
+  position: absolute;
+  bottom: 255px;
+  left: 0;
+  width: 40%;
+}
+.header .right {
+  position: absolute;
+  right: 0;
+  top: 310px;
+  width: 35%;
+}
+
+.ad {
+  padding-top: 5rem;
+}
+.ad * {
+  text-align: center;
+}
+.ad h2:before {
+  content: "";
+  display: block;
+  width: 160px;
+  height: 1px;
+  background-color: hsl(270, 9%, 17%);
+  margin: auto;
+  margin-bottom: 3rem;
+  margin-top: 4rem;
+}
+.ad h2 {
+  font-family: "DM Serif Display", serif;
+  font-size: 3rem;
+  line-height: 1;
+}
+.ad img {
+  margin-top: 3rem;
+}
+.ad h3 {
+  font-size: 2rem;
+  font-family: "DM Serif Display", serif;
+  margin: 0;
+  margin-top: 1.5rem;
+}
+.ad p {
+  font-family: "Karla", sans-serif;
+  color: hsl(273, 4%, 51%);
+  padding: 0 1.65rem;
+  line-height: 1.5;
+}
+.ad .work {
+  margin: 0 1.5rem;
+  padding: 2.5rem 1rem 5rem 1rem;
+  background-color: hsl(256, 26%, 20%);
+  color: hsl(0, 0%, 98%);
+}
+.ad .work h2 {
+  font-size: 2.5rem;
+}
+.ad .work .work-link {
+  width: 60%;
+  border: 2px solid hsl(0, 0%, 98%);
+  padding: 0.75rem;
+  text-transform: uppercase;
+  margin: 0 auto;
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
+}
+
+.footer {
+  margin-top: 8rem;
+}
+.footer .logo {
+  display: block;
+  margin: 0 auto;
+}
+.footer .socials {
+  padding: 3rem 0;
+  position: relative;
+  display: grid;
+}
+.footer .socials .social-icons {
+  display: block;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  text-align: center;
+}
+.footer .socials .social-icons .logo {
+  display: block;
+  padding: 2.5rem;
+}
+.footer .socials .social-icons img {
+  display: inline-block;
+  padding: 0 0.35rem;
+}
+.footer .socials .social-icons, .footer .socials .footer-pattern {
+  grid-area: 1/2;
+}
+.footer .socials::after {
+  content: "";
+  display: block;
+  width: 340px;
+  height: 1px;
+  background-color: hsl(216, 30%, 68%);
+  margin: auto;
+  margin-top: 2rem;
+  grid-area: 2/2;
+}
+.footer .links {
+  text-transform: uppercase;
+  font-family: "Karla", sans-serif;
+  text-align: center;
+}
+.footer .links a, .footer .links a:visited {
+  color: hsl(256, 26%, 20%);
+  text-decoration: none;
+  font-weight: 700;
+  display: block;
+  padding-bottom: 1rem;
+}
+.footer .links h4 {
+  color: hsl(273, 4%, 51%);
+  margin: 2rem 0;
+}
+
+.opened .overlay {
+  transition: opacity 1s !important;
+  opacity: 1;
+  display: block !important;
+}
+.opened .close {
+  transition: opacity 1s;
+  opacity: 1;
+  display: block;
+}
+.opened .menu {
+  transition: opacity 0.5s;
+  opacity: 0;
+  display: none;
+}
+
+@media screen and (min-width: 1440px) {
+  body .mobile {
+    display: none !important;
+  }
+  body .desktop {
+    display: block;
+  }
+}/*# sourceMappingURL=main.css.map */
