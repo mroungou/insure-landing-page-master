@@ -89,9 +89,10 @@ main .overlay .pattern-nav {
 .header h1 {
   font-family: "DM Serif Display", serif;
   font-size: 3rem;
-  padding: 3rem 1rem 0;
+  padding: 4.5rem 1rem 0;
   line-height: 1;
   margin-bottom: 1.5rem;
+  margin-top: 0;
 }
 .header p {
   margin: 0;
@@ -107,7 +108,7 @@ main .overlay .pattern-nav {
 }
 .header .left {
   position: absolute;
-  bottom: 255px;
+  top: 0;
   left: 0;
   width: 40%;
 }
@@ -183,7 +184,6 @@ main .overlay .pattern-nav {
 .footer .socials {
   padding: 3rem 0;
   position: relative;
-  display: grid;
 }
 .footer .socials .social-icons {
   display: block;
@@ -201,16 +201,6 @@ main .overlay .pattern-nav {
 }
 .footer .socials .social-icons, .footer .socials .footer-pattern {
   grid-area: 1/2;
-}
-.footer .socials::after {
-  content: "";
-  display: block;
-  width: 340px;
-  height: 1px;
-  background-color: hsl(216, 30%, 68%);
-  margin: auto;
-  margin-top: 2rem;
-  grid-area: 2/2;
 }
 .footer .links {
   text-transform: uppercase;
@@ -250,6 +240,182 @@ main .overlay .pattern-nav {
     display: none !important;
   }
   body .desktop {
+    display: block !important;
+  }
+  .nav .logo {
+    padding-left: 6rem;
+  }
+  .nav .links {
     display: block;
+    text-align: center;
+  }
+  .nav a, .nav a:visited {
+    text-transform: uppercase;
+    color: hsl(273, 4%, 51%);
+    text-decoration: none;
+    font-family: "Karla", sans-serif;
+    padding: 0.5rem 1rem;
+  }
+  .nav a:hover {
+    cursor: pointer;
+    color: hsl(270, 9%, 17%);
+  }
+  .nav #view-plans {
+    border: 2px solid hsl(270, 9%, 17%);
+  }
+  .nav #view-plans:hover {
+    background-color: hsl(270, 9%, 17%);
+    color: hsl(0, 0%, 98%);
+  }
+  .header {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .header .header-content {
+    text-align: left;
+    grid-area: 1;
+  }
+  .header .header-content h1 {
+    font-size: 4.5rem;
+    padding: 4rem 6rem 0;
+  }
+  .header .header-content h1:before {
+    content: "";
+    display: block;
+    width: 160px;
+    height: 1px;
+    background-color: hsl(0, 0%, 98%);
+    margin-bottom: 3rem;
+    margin-top: 4rem;
+  }
+  .header .header-content p {
+    padding: 0 6rem;
+    font-size: 1rem;
+  }
+  .header .header-content .plans {
+    margin: 2rem 6rem;
+    text-align: center;
+    padding: 0.75rem;
+    width: 20%;
+  }
+  .header .header-content .plans:hover {
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(256, 26%, 20%);
+    cursor: pointer;
+  }
+  .header .intro-desktop {
+    position: absolute;
+    top: 120px;
+    width: 35%;
+  }
+  .header #bg-pattern-right {
+    position: absolute;
+    width: 30%;
+    right: 0;
+  }
+  .header #bg-pattern-left {
+    position: absolute;
+    width: 15%;
+    top: 350px;
+    left: 0;
+  }
+  .ad {
+    padding: 6rem;
+  }
+  .ad * {
+    text-align: left;
+  }
+  .ad h2 {
+    text-align: left;
+    padding-top: 3rem;
+  }
+  .ad h2:before {
+    content: "";
+    display: block;
+    width: 160px;
+    height: 1px;
+    background-color: hsl(270, 9%, 17%);
+    margin-top: 4rem;
+    margin: 4rem 0 3rem;
+  }
+  .ad .points {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    -moz-column-gap: 1.5rem;
+         column-gap: 1.5rem;
+  }
+  .ad .points h2 {
+    font-size: 1.5rem;
+  }
+  .ad .points p {
+    padding: 0;
+    font-size: 14px;
+  }
+  .ad .work {
+    padding: 0;
+    margin: 8rem 0 0;
+    display: grid;
+    position: relative;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "one two";
+  }
+  .ad .work h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4.5rem;
+    margin: 0;
+    padding: 0;
+  }
+  .ad .work .test-content {
+    margin: auto;
+  }
+  .ad .work .test-content .work-link {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .ad .work .test-content .work-link:hover {
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(256, 26%, 20%);
+    cursor: pointer;
+  }
+  .ad .work #how-we-work {
+    margin: 0;
+  }
+  .ad .work .thumbmail, .ad .work .test-content {
+    grid-area: 1/2;
+  }
+  .footer {
+    padding: 0 6rem;
+  }
+  .footer #footer-pattern-desktop {
+    position: absolute;
+    left: 0;
+  }
+  .footer .socials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "logo socials";
+  }
+  .footer .logo-div {
+    margin-right: auto;
+  }
+  .footer .social-icons {
+    margin: 0 !important;
+    margin-left: auto !important;
+  }
+  .footer .social-icons img:hover {
+    cursor: pointer;
+  }
+  .footer .links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: left;
+    padding-bottom: 4rem;
+  }
+  .footer a:hover {
+    cursor: pointer;
+    text-decoration: underline;
   }
 }/*# sourceMappingURL=main.css.map */
